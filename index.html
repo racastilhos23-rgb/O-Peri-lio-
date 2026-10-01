@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Periélio</title>
+<style>
+:root{
+  --bg: #0b0d12;
+  --panel: #12151c;
+  --fg: #ece8df;
+  --muted: #8f94a3;
+  --accent: #d98c3f;
+  --line: #262b36;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]){
+    --bg: #f6f3ec;
+    --panel: #ffffff;
+    --fg: #1c1a16;
+    --muted: #6b6a63;
+    --accent: #b5641a;
+    --line: #e4e0d4;
+    color-scheme: light;
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"Source Sans 3", system-ui, -apple-system, sans-serif;
+  padding-inline:20px;
+  padding-block:56px;
+}
+.wrap{max-width:720px;margin:0 auto}
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:.72rem;
+  color:var(--accent);
+  margin:0 0 14px;
+}
+h1{
+  font-family:"Fraunces", Georgia, serif;
+  font-weight:600;
+  font-size:clamp(2.1rem, 6vw, 3rem);
+  line-height:1.08;
+  letter-spacing:-.01em;
+  margin:0 0 10px;
+}
+.subtitle{
+  font-family:"Fraunces", Georgia, serif;
+  font-style:italic;
+  color:var(--muted);
+  font-size:1.05rem;
+  margin:0 0 28px;
+  max-width:46ch;
+}
+.lede{
+  font-size:1rem;
+  line-height:1.65;
+  max-width:62ch;
+  margin:0 0 8px;
+}
+.lede b{font-weight:600}
+hr.div{border:none;border-top:1px solid var(--line);margin:40px 0 32px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:22px 22px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.card .tag{
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--accent);
+  font-weight:600;
+}
+.card h2{
+  font-family:"Fraunces", Georgia, serif;
+  font-size:1.3rem;
+  font-weight:600;
+  margin:0;
+}
+.card p{font-size:.92rem;line-height:1.55;color:var(--muted);margin:0;flex-grow:1}
+.btnrow{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:11px 16px;
+  border-radius:7px;
+  background:var(--accent);
+  color:#1a1206;
+  font-weight:600;
+  font-size:.92rem;
+  text-decoration:none;
+  border:1px solid var(--accent);
+}
+.btn.secondary{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn .sz{font-weight:400;opacity:.75;font-size:.82em}
+footer{
+  margin-top:48px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  font-size:.8rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+footer b{color:var(--fg)}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400..700;1,400..600&family=Source+Sans+3:wght@400;600;700&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Sistema Integrado do Dissidente Realista</p>
+  <h1>O Periélio</h1>
+  <p class="subtitle">A Dinâmica do Periélio — autonomia, soberania e desconexão calculada.</p>
+
+  <p class="lede">Este é o manual completo do sistema, disponível em duas versões. Clique em <b>"Abrir para ler"</b> para o PDF abrir em uma nova aba — lá você também encontra o botão de download, no próprio visualizador do navegador.</p>
+
+  <hr class="div">
+
+  <div class="cards">
+    <div class="card">
+      <span class="tag">Versão técnica</span>
+      <h2>Edição completa</h2>
+      <p>O texto original, na linguagem precisa em que o sistema foi concebido — terminologia técnica e filosófica preservada.</p>
+      <div class="btnrow">
+        <a class="btn" href="tecnico.pdf" target="_blank" rel="noopener">Abrir para ler <span class="sz">· 46 págs.</span></a>
+        <a class="btn secondary" href="tecnico.pdf" download="O Perielio.pdf">Baixar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Versão simples</span>
+      <h2>Linguagem popular</h2>
+      <p>Mesmo conteúdo, mesma estrutura e filosofia, reescrito em linguagem direta e acessível para quem está lendo pela primeira vez.</p>
+      <div class="btnrow">
+        <a class="btn" href="popular.pdf" target="_blank" rel="noopener">Abrir para ler <span class="sz">· 41 págs.</span></a>
+        <a class="btn secondary" href="popular.pdf" download="O Perielio - Linguagem Simples.pdf">Baixar</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <b>O Periélio</b> · © 2026 · Todos os direitos reservados.<br>
+    Distribuição gratuita e pessoal — proibida a cópia, revenda ou modificação deste material sem autorização.
+  </footer>
+</div>
+</body>
+</html>
